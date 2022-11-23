@@ -1,0 +1,20 @@
+[package]
+name = "editorconfig-lint"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.66"
+clap = { version = "4.0.26", features = ["derive"], optional = true }
+enum_dispatch = "0.3.8"
+fallible-iterator = "0.2.0"
+glob = "0.3.0"
+linked-hash-map = { version = "0.5.6", features = ["serde", "serde_impl"] }
+serde = { version = "1.0.147", features = ["derive"] }
+serde_ini = "0.2.0"
+serde_with = "2.1.0"
+thiserror = "1.0.37"
+
+[features]
+default = ["clap", "lib_default"]
+lib_default = []
